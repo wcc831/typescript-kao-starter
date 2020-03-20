@@ -1,0 +1,41 @@
+#%RAML 1.0
+---
+title: Admin API
+baseUri: http://localhost:3000/rest/v1/en
+
+/admin:
+  post:
+    description: Create admin
+    body: 
+      application/json:
+        example: |
+         {
+          "email": "wcc831@gmail.com",
+          "username": "wcc831",
+          "password": "pwd123",
+          "firstname": "Tony",
+          "lastname": "Wong"
+         }
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: |
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTg0NDcwMjM5fQ.UT6hqS04LoQcVkq3-JAjEQpWKgCTH79X9MGSZpem-aA
+  /login:
+    post:
+      description: Login admin
+      body: 
+        application/json:
+          example: |
+            {
+              "username": "admin",
+              "password": "P@ssw0rd123"
+            }
+      responses: 
+        200:
+          body: 
+            application/json:
+              example: |
+                eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTg0NDcwMjM5fQ.UT6hqS04LoQcVkq3-JAjEQpWKgCTH79X9MGSZpem-aA
+        
